@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import hi, r
+from .views import hi, r, hw1
 
 
 urlpatterns = [
     path('hi/<int:n1>/<int:n2>/', hi),
     path('r/<int:start>/<int:stop>/', r),
+    path('hw1/<int:start>/<int:stop>/<int:odd_or_even>/', hw1),
     path('admin/', admin.site.urls),
 ]
