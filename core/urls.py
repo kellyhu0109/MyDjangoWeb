@@ -18,10 +18,13 @@ from django.urls import path
 
 from .views import hi, r, tag_test
 
+from practice1 import views
 
 urlpatterns = [
     path('hi/<int:n1>/<int:n2>/', hi),
     path('r/<int:start>/<int:stop>/', r),
     path('tag_test/', tag_test),
     path('admin/', admin.site.urls),
+    path('posts/', views.index),
+    path('posts/<int:num>/', views.show, name='posts_show'),
 ]
